@@ -1,6 +1,6 @@
 
 
-# Functinon to generate a dict from a file
+# Function to generate a dictionary from file
 def generate_dictionary() -> dict():
     filepath = "./dictionary.txt"
     dict_name = dict()
@@ -17,7 +17,7 @@ def generate_dictionary() -> dict():
             dict_name[size] = [word]
     return dict_name
 
-# function to organize letters in a word alphabetically
+# function to organize chars in a word alphabetically
 def sort_letters_in_word(word: str) -> str:
     word = ''.join(sorted(word))
     return word
@@ -35,8 +35,8 @@ while user_word != ".quit":
     same_length = user_dict[len(user_word)]
     anagrams = []
 
-    # for each word of the same length in the dict, 
-    # if the organized words are equal, and the 
+    # for each word of the same length in dict, 
+    # if the organized words are equal, and 
     # dict word != the entered word, add word to the 
     # list of anagrams
     for word in same_length:
