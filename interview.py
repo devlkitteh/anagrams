@@ -1,8 +1,7 @@
-
+import os
 
 # Function to generate a dictionary from file
-def generate_dictionary() -> dict():
-    filepath = "./dictionary.txt"
+def generate_dictionary(filepath: str) -> dict:
     dict_name = dict()
     with open(filepath, "r") as file:
         dict_file = file.readlines()
@@ -23,8 +22,14 @@ def sort_letters_in_word(word: str) -> str:
     return word
 
 print("Welcome to the anagram program! Enter '.quit' at the anagram prompt to exit the program.")
+
+filepath = "./dictionary.txt"
+using_docker = os.getenv("USING_DOCKER", "FALSE")
+
+if (using_docker == "FALSE"): filepath = input("Dictionary filepath: ")
+
 print("building dictionary from file. . .")
-user_dict = generate_dictionary()
+user_dict = generate_dictionary(filepath)
 
 user_word = input("Word to anagram: ").strip()
 
