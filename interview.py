@@ -1,7 +1,8 @@
 
 
 # Functinon to generate a dict from a file
-def generate_dictionary(filepath: str) -> dict():
+def generate_dictionary() -> dict():
+    filepath = "./dictionary.txt"
     dict_name = dict()
     with open(filepath, "r") as file:
         dict_file = file.readlines()
@@ -21,12 +22,12 @@ def sort_letters_in_word(word: str) -> str:
     word = ''.join(sorted(word))
     return word
 
-filepath = input("Please submit dictionary filepath: ")
-print("creating working dictionary. . .")
+print("Welcome to the anagram program! Enter '.quit' at the anagram prompt to exit the program.")
+print("building dictionary from file. . .")
+user_dict = generate_dictionary()
 
-user_dict = generate_dictionary(filepath)
+user_word = input("Word to anagram: ").strip()
 
-user_word = input("To exit the program, enter \".quit\" \nWord to anagram: ").strip()
 while user_word != ".quit":
     ordered_user_word = sort_letters_in_word(user_word).lower()
     print("finding anagrams. . .")
@@ -45,4 +46,4 @@ while user_word != ".quit":
             
     print(user_word + " has " + str(len(anagrams)) + " anagrams: ")
     print(anagrams)
-    user_word = input("To exit the program, enter \".quit\" \n Next word to anagram: ")
+    user_word = input("To exit the program, enter '.quit' \nNext word to anagram: ")
