@@ -5,10 +5,11 @@ A small project to find anagrams of entered words
 ## Prerequisites:
 - Must have docker installed
 - Must have access to python:3.7-alpine image (via dockerhub or locally)
-- The commands in "To run" assume a linux (Ubuntu) environment.  Your commands may be different if you are using something else.
 
 ## Notes:
-To use a custom dictionary file, name the file "dictionary.txt" and place it in the main project directory. **Ensure that your custom dictionary follows the format of the included example file**
+- To use a custom dictionary file, name the file "dictionary.txt" and place it in the main project directory. **Ensure that your custom dictionary follows the format of the included example file**
+
+- The commands in "To run" assume a linux (Ubuntu) environment.  Your commands may be different if you are using something else
 
 ## To run:
 
